@@ -1,0 +1,18 @@
+
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+    <mat-card fxFlex="60">
+      <mat-card-header>
+        <mat-card-title>Item Details</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div><span class="heading">Name: </span> {{itemDetails.name}}</div>
+        <div><span class="heading">Price: </span> {{itemDetails.price}}</div>
+        <div><span class="heading">Description :</span> {{itemDetails.description}}</div>
+        <div class="msg">Do you really want to delete this item?</div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" routerLink="/item/list">No</button>
+        <button mat-raised-button color="warn" (click)="delete()">Yes</button>
+      </mat-card-actions>
+    </mat-card>
+</div>
